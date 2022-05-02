@@ -1,0 +1,94 @@
+/* --------------------------- START Google Fonts --------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* ---------------------------- END Google Fonts ---------------------------- */
+
+/*! Start Reset Codes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+/*! End Reser Codex */
+
+/*? Start section */
+section {
+  padding: 50px;
+  background: #000000;
+}
+/*? End section */
+
+/** Start Header Title */
+.header {
+  font-size: 40px;
+  color: purple;
+  margin-bottom: 50px;
+}
+/** End Header Title */
+
+/** Start text */
+.text {
+  font-size: 20px;
+  color: #ffffff;
+}
+/** End text */
+
+/*! Hide default scroll bar */
+::-webkit-scrollbar {
+  width: 0;
+}
+/*! Hide default scroll bar */
+
+/** Start custom scroll bar */
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+#progressBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  /** Scroll bar animation */
+  animation: animate 5s linear infinite;
+}
+/** End custom scroll bar */
+
+/*! Start animation codes */
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+#progressBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+#progressBar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+/*! End animation codes */
